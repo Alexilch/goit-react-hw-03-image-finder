@@ -37,7 +37,7 @@ export default class App extends Component {
       'https://pixabay.com/api/?image_type=photo&orientation=horizontal&per_page=12';
     const API_KEY = '23976074-1864ef446645d9fee251ba638';
 
-    this.setState({ status: 'pending', hits: [], total: null });
+    this.setState({ status: 'pending' });
     setTimeout(() => {
       return fetch(
         `${BASE_URL}&q=${this.state.searchQuery}&page=${this.state.page}&key=${API_KEY}`,
