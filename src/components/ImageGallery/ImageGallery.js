@@ -2,7 +2,7 @@ import { Component } from 'react';
 import ImageGalleryItem from '../ImageGalleryItem';
 import s from './ImageGallery.module.css';
 import Modal from '../Modal/Modal';
-
+import PropTypes, { shape } from 'prop-types';
 export default class ImageGallery extends Component {
   state = {
     showModal: false,
@@ -46,3 +46,13 @@ export default class ImageGallery extends Component {
     );
   }
 }
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(
+    shape({
+      id: PropTypes.number,
+      webformatURL: PropTypes.string,
+      largeImageURL: PropTypes.string,
+      tags: PropTypes.string,
+    }),
+  ),
+};

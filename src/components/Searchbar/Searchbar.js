@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { toast } from 'react-toastify';
 import s from './Searchbar.module.css';
 import '../icons/search_black_24dp.svg';
+import PropTypes from 'prop-types';
 
 export default class Searchbar extends Component {
   state = {
@@ -16,7 +17,7 @@ export default class Searchbar extends Component {
     event.preventDefault();
 
     if (this.state.query.trim() === '') {
-      toast.error('Нельзя отправлять пустой запрос', {
+      toast.error('Cannot send empty request', {
         position: 'top-left',
         autoClose: 2000,
         hideProgressBar: true,
@@ -53,3 +54,7 @@ export default class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
