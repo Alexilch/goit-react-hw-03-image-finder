@@ -19,3 +19,35 @@
   max-width: calc(100vw - 48px);
   max-height: calc(100vh - 24px);
 }
+
+.left {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url('../icons/arrow_back_ios_black_24dp.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+.left:active {
+  transform: scale(1.08);
+}
+
+.right {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url('../icons/arrow_forward_ios_black_24dp.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+.right:active {
+  transform: scale(1.08);
+}

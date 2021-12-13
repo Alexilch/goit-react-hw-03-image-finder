@@ -20,10 +20,34 @@ export default class ImageGallery extends Component {
     this.toggleModal();
   };
 
+  onArrowRight = () => {
+    const sourceImg = this.props.images.map(({ largeImageURL }) => {
+      return largeImageURL;
+    });
+    let indexOfImg = sourceImg.indexOf(this.state.imageModal);
+
+    if (indexOfImg + 1 > sourceImg.length - 1) {
+      indexOfImg = -1;
+    }
+    this.setState({ imageModal: sourceImg[indexOfImg + 1] });
+  };
+
+  onArrowLeft = () => {
+    const sourceImg = this.props.images.map(({ largeImageURL }) => {
+      return largeImageURL;
+    });
+    let indexOfImg = sourceImg.indexOf(this.state.imageModal);
+
+    if (indexOfImg === 0) {
+      indexOfImg = sourceImg.length;
+    }
+    this.setState({ imageModal: sourceImg[indexOfImg - 1] });
+  };
+
   render() {
     const { images } = this.props;
     const { showModal, imageModal } = this.state;
-    // console.log(images)
+
     return (
       <>
         <ul className={s.ImageGallery}>
@@ -35,13 +59,17 @@ export default class ImageGallery extends Component {
                 largeImageURL={largeImageURL}
                 tags={tags}
                 onClick={this.handleClick}
-                // ref={ref}
               />
             );
           })}
         </ul>
         {showModal && (
-          <Modal imageModal={imageModal} onClose={this.toggleModal} />
+          <Modal
+            imageModal={imageModal}
+            onClose={this.toggleModal}
+            onArrowRight={this.onArrowRight}
+            onArrowLeft={this.onArrowLeft}
+          />
         )}
       </>
     );
