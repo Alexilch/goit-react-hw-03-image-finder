@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import s from './Modal.module.css';
-import '../icons/arrow_back_ios_new_black_24dp.svg';
+import '../icons/arrow_back_ios_black_24dp.svg';
 import '../icons/arrow_forward_ios_black_24dp.svg';
 
 const modalRoot = document.querySelector('#modal-root');
