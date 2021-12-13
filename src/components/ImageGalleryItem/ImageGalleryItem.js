@@ -5,9 +5,10 @@ export default function ImageGalleryItem({
   largeImageURL,
   tags,
   onClick,
+  ref = null,
 }) {
   return (
-    <li className={s.ImageGalleryItem}>
+    <li className={s.ImageGalleryItem} ref={ref}>
       <img
         className={s.ImageGalleryItem_image}
         src={webformatURL}

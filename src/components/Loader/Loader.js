@@ -3,7 +3,7 @@ import { Component } from 'react';
 import Loader from 'react-loader-spinner';
 import s from './Loader.module.css';
 
-export default class App extends Component {
+export default class LoaderComponent extends Component {
   render() {
     return (
       <Loader

@@ -35,6 +35,7 @@ export default class ImageGallery extends Component {
                 largeImageURL={largeImageURL}
                 tags={tags}
                 onClick={this.handleClick}
+                // ref={ref}
               />
             );
           })}
