@@ -15,8 +15,8 @@ export default class ImageGallery extends Component {
     }));
   };
 
-  handleClick = event => {
-    this.setState({ imageModal: event.target.dataset.source });
+  handleClick = largeImageURL => {
+    this.setState({ imageModal: largeImageURL });
     this.toggleModal();
   };
 
@@ -58,7 +58,9 @@ export default class ImageGallery extends Component {
                 webformatURL={webformatURL}
                 largeImageURL={largeImageURL}
                 tags={tags}
-                onClick={this.handleClick}
+                onClick={() => {
+                  this.handleClick(largeImageURL);
+                }}
               />
             );
           })}

@@ -2,7 +2,7 @@ import Searchbar from './components/Searchbar';
 import { Component } from 'react';
 import { ToastContainer, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import RenderComponent from './components/RenderComponent/RenderComponent';
+import RenderAPI from './components/RenderAPI';
 export default class App extends Component {
   state = {
     searchQuery: '',
@@ -16,7 +16,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <Searchbar onSubmit={this.handleSearchbarSubmit} />
-        <RenderComponent searchQuery={this.state.searchQuery} />
+        <RenderAPI searchQuery={this.state.searchQuery} />
         <ToastContainer transition={Slide} />
       </div>
     );

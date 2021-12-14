@@ -8,7 +8,7 @@ import Button from '../Button';
 import NotFound from '../NotFound';
 import API from '../../services/searchAPI';
 
-export default class RenderComponent extends Component {
+export default class RenderAPI extends Component {
   state = {
     page: 1,
     images: [],
@@ -99,6 +99,6 @@ export default class RenderComponent extends Component {
   }
 }
 
-RenderComponent.propTypes = {
+RenderAPI.propTypes = {
   searchQuery: PropTypes.string,
 };
