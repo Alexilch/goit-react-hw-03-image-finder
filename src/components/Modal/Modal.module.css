@@ -19,7 +19,6 @@
   max-width: calc(100vw - 48px);
   max-height: calc(100vh - 24px);
   animation: showModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  /* animation: scaleUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards; */
 }
 
 @keyframes showModal {
@@ -35,12 +34,13 @@
 
 .leftarrow {
   position: absolute;
-  left: -60px;
+  left: 0;
   top: 45%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-image: url('../icons/arrow_back_ios_black_24dp.svg');
+  background-color: rgba(255, 255, 255, 0.4);
   background-position: center;
   background-repeat: no-repeat;
   border: none;
@@ -51,12 +51,13 @@
 
 .rightarrow {
   position: absolute;
-  right: -60px;
+  right: 0;
   top: 45%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-image: url('../icons/arrow_forward_ios_black_24dp.svg');
+  background-color: rgba(255, 255, 255, 0.4);
   background-repeat: no-repeat;
   background-position: center;
   border: none;
